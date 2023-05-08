@@ -55,8 +55,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js"></script>
     <style>
       #book {
-        margin: 5% auto;
-        width: 1000px;
+        width: 100%;
         height: 500px;
       }
       #book .turn-page {
@@ -81,9 +80,7 @@
 
       /* Additional styles for mobile */
       @media only screen and (max-width: 480px) {
-        #book {
-          margin: 10% auto;
-        }
+
         #book div {
           background-position: top center;
         }
@@ -100,6 +97,87 @@
       }
       #book > div.zoom {
         transform: scale(2);
+      }
+      p {
+        margin-top: 10px;
+        font-size: 13px;
+        text-align: justify;
+      }
+      .container1,
+      .book-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container1 {
+        width: 100%;
+        height: 100vh;
+      }
+      .book-content {
+        width: auto;
+        min-width: 250px;
+        max-width: 400px;
+        height: 330px;
+        position: relative;
+        perspective: 1000px;
+        transition: 1s;
+      }
+      .book {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: 1s;
+        transform-style: preserve-3d;
+        transform-origin: left;
+      }
+      .face-front,
+      .face-back {
+        width: 100%;
+        height: 100%;
+        background: white;
+        padding: 15px;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+      .face-front {
+        box-shadow: inset 3px 0px 20px -7px black;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+      .face-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateZ(-1px) rotateY(180deg);
+        box-shadow: inset -3px 1px 20px -7px black;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+      #portada {
+        background: url("./imgages/bookPortada.jpg");
+      }
+      #portada-back {
+        background: url("./imgages/portadaBack.jpg");
+      }
+      #portada,
+      #portada-back {
+        background-size: 100% 100%;
+      }
+
+      /* Clases que se agregaran con Javascript */
+
+
+      .trnsf-reset {
+        transform: translateX(0px);
+      }
+
+      /* @media para hacer el texto responsivo */
+
+      @media screen and (max-width: 800px) {
+        p {
+          font-size: 12px;
+        }
       }
     </style>
   </head>
@@ -187,10 +265,13 @@
             </h5>
             <h1 class="mb-5">Меню</h1>
             <!-- It is beeing implemented but it is not responsive neither to different sizes nor to any mobile -->
-            <div class="container" data-wow-delay="0.1s" id="book">
+            <div class="container1" data-wow-delay="0.1s" id="book">
               <div
                 class="menuItem"
-                style="background-image: url(menuItems/CoverNew2.jpg)"
+                style="
+                  background-image: url(menuItems/CoverNew2.jpg);
+                  background-size: contain;
+                "
               ></div>
               <div
                 class="menuItem"
@@ -225,6 +306,12 @@
               <div style="background-image: url(menuItems/19.jpg)"></div>
               <div style="background-image: url(menuItems/20.jpg)"></div>
               <div style="background-image: url(menuItems/21.jpg)"></div>
+              <div
+                style="
+                  background-image: url(menuItems/CoverNew2.jpg);
+                  background-size: contain;
+                "
+              ></div>
             </div>
           </div>
         </div>
