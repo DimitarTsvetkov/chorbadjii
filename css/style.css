@@ -745,3 +745,13 @@ button.mfp-close:hover:after {
 button.mfp-close:active {
   transform: scale(0.95);
 }
+
+#headerButton {
+  background: url("../img/h1.jpg") no-repeat scroll 0 0 transparent;
+  color: #000000;
+  cursor: pointer;
+  font-weight: bold;
+  height: 100%;
+  padding-bottom: 2px;
+  width: 75px;
+}
