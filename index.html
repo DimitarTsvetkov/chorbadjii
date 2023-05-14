@@ -101,19 +101,20 @@
                 <h1 class="display-5 text-white animated slideInLeft">
                   Вашата усмивка<br />е нашата мисия!
                 </h1>
-                <p class="text-white animated slideInLeft mb-4 pb-2">
-                  Добре дошли в нашия ресторант! Горди сме да ви предложим
-                  най-вкусната храна в града, поднесена с внимание към всеки
-                  детайл. Нашата кухня предлага широка гама от ястия, приготвени
-                  с пресни съставки от местни производители. Опитайте нашите
-                  специалитети и се насладете на неповторимата атмосфера в нашия
-                  ресторант. Очакваме ви!
-                </p>
-                <a
-                  href=""
-                  class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft"
-                  >Виж още</a
-                >
+                <div class="block-item-text">
+                  <input type="checkbox" hidden class="read-more-state" id="read-more">
+                  <div class="read-more-wrap">
+                    <p class="text-white animated slideInLeft mb-4 pb-2">
+                      Добре дошли в нашия ресторант! Горди сме да ви предложим най-вкусната храна в града, поднесена с внимание към всеки детайл.<br>
+                     Нашата кухня 
+                    </p>
+                    <p class="text-white animated slideInLeft mb-4 pb-2 read-more-target">
+                        предлага широка гама от ястия, приготвени с пресни съставки от местни производители. Опитайте нашите специалитети и се насладете на неповторимата атмосфера в нашия ресторант. Очакваме ви!
+                    </p>
+                  </div>
+                  <label for="read-more" class="text-white animated slideInLeft mb-4 pb-2 read-more-trigger_closed">...</label>
+                  <label for="read-more" class="text-white animated slideInLeft mb-4 pb-2 read-more-trigger_opened">X</label>
+                </div>
               </div>
               <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                 <img class="img-fluid" src="img/barbeku.jpg" alt="" />
