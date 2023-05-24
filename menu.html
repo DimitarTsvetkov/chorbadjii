@@ -251,51 +251,7 @@
             </h5>
             <h1 class="mb-5">Меню</h1>
             <!-- It is beeing implemented but it is not responsive neither to different sizes nor to any mobile -->
-            <div class="container1" data-wow-delay="0.1s" id="book">
-              <div
-                class="menuItem"
-                style="background-image: url(menuItems/newCover.jpg)"
-              ></div>
-              <div
-                class="menuItem"
-                style="background-image: url(menuItems/1.jpg)"
-              ></div>
-              <div
-                class="menuItem"
-                style="background-image: url(menuItems/2.jpg)"
-              ></div>
-              <div
-                class="menuItem"
-                style="background-image: url(menuItems/3.jpg)"
-              ></div>
-              <div
-                class="menuItem"
-                style="background-image: url(menuItems/4.jpg)"
-              ></div>
-              <div style="background-image: url(menuItems/5.jpg)"></div>
-              <div style="background-image: url(menuItems/6.jpg)"></div>
-              <div style="background-image: url(menuItems/7.jpg)"></div>
-              <div style="background-image: url(menuItems/8.jpg)"></div>
-              <div style="background-image: url(menuItems/9.jpg)"></div>
-              <div style="background-image: url(menuItems/10.jpg)"></div>
-              <div style="background-image: url(menuItems/11.jpg)"></div>
-              <div style="background-image: url(menuItems/12.jpg)"></div>
-              <div style="background-image: url(menuItems/13.jpg)"></div>
-              <div style="background-image: url(menuItems/14.jpg)"></div>
-              <div style="background-image: url(menuItems/15.jpg)"></div>
-              <div style="background-image: url(menuItems/16.jpg)"></div>
-              <div style="background-image: url(menuItems/17.jpg)"></div>
-              <div style="background-image: url(menuItems/18.jpg)"></div>
-              <div style="background-image: url(menuItems/19.jpg)"></div>
-              <div style="background-image: url(menuItems/20.jpg)"></div>
-              <div style="background-image: url(menuItems/21.jpg)"></div>
-              <div
-                style="
-                  background-image: url(menuItems/CoverNew2.jpg);
-                  background-size: contain;
-                "
-              ></div>
-            </div>
+            <div class="container1" data-wow-delay="0.1s" id="book"></div>
           </div>
         </div>
       </div>
@@ -406,7 +362,47 @@
     <script src="turn.min.js"></script>
     <!-- <script src="js/main.js"></script> -->
     <script>
-      $("#book").turn({ gradients: true, acceleration: true });
+        $(document).ready(function () {
+        // Path to the folder containing the images
+        var folderPath = "menuItems";
+        var imagePaths = [];
+
+        // Retrieve image file names using Ajax
+        $.ajax({
+          url: folderPath,
+          success: function (data) {
+            // Parse the HTML response and extract image paths
+            var images = $(data).find("a");
+
+            // Loop through the images and log the href paths
+            images.each(function () {
+              var imageUrl = $(this).attr("href");
+              imagePaths.push(imageUrl);
+            });
+            imagePaths = imagePaths.filter(function (imagePath) {
+              return imagePath.endsWith(".jpg");
+            });
+            imagePaths = imagePaths.map(function (imagePath) {
+              return imagePath.replace("/chorbadjii/", "");
+            });
+
+            console.log(imagePaths);
+            var container = document.getElementById("book");
+
+            imagePaths.forEach(function (url) {
+              var div = document.createElement("div");
+              div.classList.add("menuItem");
+              div.style.backgroundImage = "url(" + url + ")";
+              container.appendChild(div);
+            });
+
+            $("#book").turn({
+              gradients: true,
+              acceleration: true,
+            });
+          },
+        });
+      });
     </script>
   </body>
 </html>
