@@ -183,10 +183,12 @@
     <!-- Your jQuery code -->
     <script>
        $(document).ready(function() {
-  // Path to the folder containing the images
-  var folderPath = 'gallery';
+  // Absoloute to the folder containing the images
+        var baseURLDev = "https://dimitartsvetkov.github.io/";
+        var baseURLLocal = "http://127.0.0.1:5500/";
+        var folderPath = baseURLDev + "chorbadjii/gallery";
 
-  // Retrieve image file names using Ajax
+  
   $.ajax({
     url: folderPath,
     success: function(data) {
@@ -205,6 +207,8 @@
         return imagePath.endsWith(".jpg");
       });
 
+      
+      console.log(imagePaths)
       // Generate the gallery elements
       imagePaths.forEach(function(imageUrl) {
         // Create gallery element and append it to the container

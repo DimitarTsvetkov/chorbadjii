@@ -362,9 +362,13 @@
     <script src="turn.min.js"></script>
     <!-- <script src="js/main.js"></script> -->
     <script>
-        $(document).ready(function () {
+      $(document).ready(function () {
+        // Base URL
+        var baseURLDev = "https://dimitartsvetkov.github.io/";
+        var baseURLLocal = "http://127.0.0.1:5500/";
+
         // Path to the folder containing the images
-        var folderPath = "menuItems";
+        var folderPath = baseURLDev + "chorbadjii/menuItems";
         var imagePaths = [];
 
         // Retrieve image file names using Ajax
