@@ -362,9 +362,9 @@
     <script src="turn.min.js"></script>
     <!-- <script src="js/main.js"></script> -->
     <script>
-        $(document).ready(function () {
+      $(document).ready(function () {
         // Path to the folder containing the images
-        var folderPath = "menuItems";
+        var folderPath = window.location.pathname + "menuItems";
         var imagePaths = [];
 
         // Retrieve image file names using Ajax
