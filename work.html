@@ -127,11 +127,13 @@
                 <h5 class="mb-0">Барман</h5>
                 <small>Пусни CV</small>
                 <div class="d-flex justify-content-center mt-3">
-                  <a
+                  <button
                     class="btn btn-primary mx-1"
-                    href="mailto: didi_em_ood@abv.bg"
-                    >CV</a
+                    data-bs-toggle="modal"
+                    data-bs-target="#emailModal"
                   >
+                    CV
+                  </button>
                 </div>
               </div>
             </div>
@@ -143,11 +145,13 @@
                 <h5 class="mb-0">Сервитьор/Сервитьорка</h5>
                 <small>Пусни CV</small>
                 <div class="d-flex justify-content-center mt-3">
-                  <a
+                  <button
                     class="btn btn-primary mx-1"
-                    href="mailto: didi_em_ood@abv.bg"
-                    >CV</a
+                    data-bs-toggle="modal"
+                    data-bs-target="#emailModal"
                   >
+                    CV
+                  </button>
                 </div>
               </div>
             </div>
@@ -163,13 +167,43 @@
                 <h5 class="mb-0">Барбекюрист</h5>
                 <small>Пусни CV</small>
                 <div class="d-flex justify-content-center mt-3">
-                  <a
+                  <button
                     class="btn btn-primary mx-1"
-                    href="mailto: didi_em_ood@abv.bg"
-                    >CV</a
+                    data-bs-toggle="modal"
+                    data-bs-target="#emailModal"
                   >
+                    CV
+                  </button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="emailModal"
+        tabindex="-1"
+        aria-labelledby="emailModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="emailModalLabel">
+                Моля изпратете CV
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>На следния емейл :</p>
+              <p><strong>didi_em_ood@abv.bg</strong></p>
             </div>
           </div>
         </div>
