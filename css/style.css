@@ -824,31 +824,53 @@ button.mfp-close:active {
 
 #headerFirst {
   cursor: pointer;
-  font-family: "CyrillicOld", arial;
+  /* font-family: "CyrillicOld", arial; */
+  font-family: "Old Standard TT", arial;
 }
 
 #headerSecond {
   cursor: pointer;
-  font-family: "CyrillicOld", arial;
+  font-family: "Old Standard TT", arial;
 }
 
 #headerThird {
   cursor: pointer;
-  font-family: "CyrillicOld", arial;
+  font-family: "Old Standard TT", arial;
 }
 #headerFourth {
   cursor: pointer;
-  font-family: "CyrillicOld", arial;
+  font-family: "Old Standard TT", arial;
 }
 
 #headerFifth {
   cursor: pointer;
-  font-family: "CyrillicOld", arial;
+  font-family: "Old Standard TT", arial;
 }
 
 #headerSixth {
   cursor: pointer;
-  font-family: "CyrillicOld", arial;
+  font-family: "Old Standard TT", arial;
+}
+#headerSeventh {
+  cursor: pointer;
+  font-family: "Old Standard TT", arial;
+}
+#headerEigth {
+  cursor: pointer;
+  font-family: "Old Standard TT", arial;
+}
+#headerNinth {
+  cursor: pointer;
+  font-family: "Old Standard TT", arial;
+}
+#headerTenth {
+  cursor: pointer;
+  font-family: "Old Standard TT", arial;
+}
+
+.headerFont {
+  cursor: pointer;
+  font-family: "Old Standard TT", arial;
 }
 
 .read-more-target,
