@@ -1,2 +1,3 @@
   =>  Technologies    : Bootstrap , jquery , css , query turn js , javascript , html 5
-  => 7 pages with static html without back end and javascript nested either in js files or in main. js
+  => 10 pages with static html without back end and javascript nested either in js files or in main. js
+  => Gallery - jquery css , Menu - turn. js 
