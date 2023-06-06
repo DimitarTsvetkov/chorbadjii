@@ -886,9 +886,12 @@ button.mfp-close:active {
 }
 
 .img-hover-scale {
-  transition: transform 0.3s ease;
+  transition: transform 0.01s ease;
 }
 
 .img-hover-scale:hover {
   transform: scale(4.4);
+  position: fixed;
+  position: center;
+  translate: 150%;
 }
