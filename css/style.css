@@ -884,3 +884,11 @@ button.mfp-close:active {
 .read-more-state:checked ~ .read-more-trigger_closed {
   display: none;
 }
+
+.img-hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.img-hover-scale:hover {
+  transform: scale(4.4);
+}
