@@ -43,7 +43,7 @@
           $this.removeClass(showClass);
           $this.find($dropdownToggle).attr("aria-expanded", "false");
           $this.find($dropdownMenu).removeClass(showClass);
-        }
+        },
       );
     } else {
       $dropdown.off("mouseenter mouseleave");
@@ -64,6 +64,15 @@
   });
 
   // Facts counter
+  var $experienceYears = $("#experience-years");
+  if ($experienceYears.length > 0) {
+    var startYear = Number($experienceYears.data("experience-start-year"));
+    var experienceYears = new Date().getFullYear() - startYear;
+
+    $experienceYears.text(experienceYears);
+    $("#experience-label").text(experienceYears + " години");
+  }
+
   $('[data-toggle="counter-up"]').counterUp({
     delay: 10,
     time: 2000,
@@ -77,7 +86,10 @@
     });
 
     $("#videoModal").on("shown.bs.modal", function (e) {
-      $("#video").attr("src", $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+      $("#video").attr(
+        "src",
+        $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0",
+      );
     });
 
     $("#videoModal").on("hide.bs.modal", function (e) {
